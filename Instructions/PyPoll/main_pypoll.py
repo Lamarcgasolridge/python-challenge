@@ -26,4 +26,16 @@ with open(csvpath, newline='') as csvfile:
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvfile)
-    
+    for row in csvreader:
+        if row[2] == candidates[0]:
+            khan +=1
+        if row[2] == candidates[1]:
+            correy +=1
+        if row[2] == candidates[2]:
+            li +=1
+        if row[2] == candidates[3]:
+            otooley +=1
+
+tot_votes = khan + correy + li + otooley
+
+

@@ -40,21 +40,11 @@ with open(csvpath, newline='') as csvfile:
     print(f'The greatest increase in profits: ${net_revenue[0]}')
     print(f'The greatest decrease in profits: ${net_revenue[len(net_revenue)-1]}')  
 
+
+#Output Document
     output_path = 'Pybank Analysis.txt'
     
 with open(output_path, 'w', newline = '') as csvfile:
-    csvwriter = csv.writer(csvfile, delimiter=',')
-    csvwriter.writerow(['Financial Analysis'])
-    csvwriter.writerow(["------------------------------------------------------"])
-    csvwriter.writerow([f'Total Months: {len(months)}'])
-    csvwriter.writerow([f'Total Profits/Losses: ${tot_revenue}'])
-    csvwriter.writerow([f'Average Change: ${round(average(net_revenue),2)}'])
-    csvwriter.writerow([f'The greatest increase in profits: ${net_revenue[0]}'])
-    csvwriter.writerow([f'The greatest decrease in profits: ${net_revenue[len(net_revenue)-1]}'])
-
-# output file
-    output_path = 'Financial Analysis.txt'
-with open(output_path, 'w', newline ='') as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=',')
     csvwriter.writerow(['Financial Analysis'])
     csvwriter.writerow(["------------------------------------------------------"])
